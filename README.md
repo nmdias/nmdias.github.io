@@ -1,1 +1,0 @@
-# nmdias.github.io
