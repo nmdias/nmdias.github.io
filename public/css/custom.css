@@ -1,0 +1,60 @@
+main > div > p {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 40px 40px 40px;
+}
+
+.image-row-wrapper {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.image-row-wrapper::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari */
+}
+
+.image-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  min-width: max-content;
+}
+
+.image-row img {
+  max-width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 0px;
+}
+
+:root {
+  --blockquote-border-color: #eaeaea;
+}
+
+html[data-theme="dark"] {
+  --blockquote-border-color: #888;
+}
+
+blockquote {
+  border-left: 2px solid var(--blockquote-border-color);
+}
+
+
+.image-row-wrapper  {
+  filter: saturate(0%) opacity(10%);
+  transition: filter 0.75s ease-out;
+    scroll-behavior: smooth;
+
+}
+
+.image-row-wrapper.in-view {
+  filter: saturate(100%) opacity(100%);
+}
+
+code {
+  line-height: 30px;
+}
